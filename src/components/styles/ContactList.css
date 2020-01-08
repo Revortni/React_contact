@@ -40,6 +40,7 @@
 
   .list_item_wrapper {
     padding: 10px 0;
+    font-size: 16px;
   }
 
   .list_item_wrapper:hover {
@@ -64,6 +65,7 @@
 
   .list_item_wrapper {
     padding: 10px 0;
+    font-size: 16px;
   }
 
   .list_item_wrapper:hover {
