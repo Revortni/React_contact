@@ -16,7 +16,18 @@ const withDetail = Component => {
   };
 };
 
-const EnhancedContactList = withDetail(ContactList);
+const withSearch = Component => {
+  return ({ search, ...otherProps }) => {
+    return (
+      <>
+        <SearchContact handleSearch={search} />
+        <Component {...otherProps} />
+      </>
+    );
+  };
+};
+
+const EnhancedContactList = withDetail(withSearch(ContactList));
 
 const Main = () => {
   const [filteredUsers, setFilteredUsers] = useState([]);
@@ -37,7 +48,10 @@ const Main = () => {
     setFilteredUsers(
       allUsers &&
         allUsers.filter(user => {
-          return user.firstName.includes(param);
+          return (
+            user.firstName.toLowerCase().includes(param.toLowerCase()) ||
+            user.lastName.toLowerCase().includes(param.toLowerCase())
+          );
         })
     );
   };
@@ -54,12 +68,12 @@ const Main = () => {
     <div className='Main'>
       <Header showProfile={showProfile} />
       <div className='below_header'>
-        <SearchContact handleSearch={filterContacts} />
         <EnhancedContactList
           users={filteredUsers}
           onClick={handleOnClick}
           showProfile={showProfile}
           backHandler={backHandler}
+          search={filterContacts}
         />
       </div>
     </div>
