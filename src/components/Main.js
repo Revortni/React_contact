@@ -19,15 +19,28 @@ const withDetail = Component => {
 const EnhancedContactList = withDetail(ContactList);
 
 const Main = () => {
-  const [users, setUsers] = useState([]);
+  const [filteredUsers, setFilteredUsers] = useState([]);
+  useEffect(() => {}, []);
+
+  const [allUsers, setAllUsers] = useState([]);
   useEffect(() => {
     fetchUserData().then(data => {
-      setUsers(data);
+      setAllUsers(data);
+      setFilteredUsers(data);
     });
   }, []);
 
   const [showProfile, setShowProfile] = useState({});
   useEffect(() => {}, []);
+
+  const filterContacts = (param = '') => {
+    setFilteredUsers(
+      allUsers &&
+        allUsers.filter(user => {
+          return user.firstName.includes(param);
+        })
+    );
+  };
 
   const backHandler = () => {
     setShowProfile({ show: false });
@@ -41,8 +54,9 @@ const Main = () => {
     <div className='Main'>
       <Header showProfile={showProfile} />
       <div className='below_header'>
+        <SearchContact handleSearch={filterContacts} />
         <EnhancedContactList
-          users={users}
+          users={filteredUsers}
           onClick={handleOnClick}
           showProfile={showProfile}
           backHandler={backHandler}
