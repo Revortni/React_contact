@@ -14,6 +14,10 @@
   display: table;
 }
 
+.below_header {
+  padding-top: 62px;
+}
+
 @media screen and (min-width: 1170px) {
   .container {
     width: 73.125em;
@@ -23,6 +27,10 @@
   .app {
     width: 100%;
     min-width: 73.125em;
+  }
+
+  .below_header {
+    padding-top: 80px;
   }
 }
 
@@ -35,5 +43,9 @@
   .app {
     width: 100%;
     min-width: 48em;
+  }
+
+  .below_header {
+    padding-top: 80px;
   }
 }

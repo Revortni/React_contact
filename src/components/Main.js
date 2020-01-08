@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import ContactList from './ContactList';
+import SearchContact from './SearchContact';
 import Profile from './Profile';
 import { fetchUserData } from './services/fetchData';
 import './styles/Main.css';
@@ -39,12 +40,14 @@ const Main = () => {
   return (
     <div className='Main'>
       <Header showProfile={showProfile} />
-      <EnhancedContactList
-        users={users}
-        onClick={handleOnClick}
-        showProfile={showProfile}
-        backHandler={backHandler}
-      />
+      <div className='below_header'>
+        <EnhancedContactList
+          users={users}
+          onClick={handleOnClick}
+          showProfile={showProfile}
+          backHandler={backHandler}
+        />
+      </div>
     </div>
   );
 };
