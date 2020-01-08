@@ -14,7 +14,10 @@
 
 .profile_info div {
   padding: 10px;
-  border-bottom: 1px solid #cecece;
+}
+
+.profile_info div:not(.profile_info_title) {
+  border-bottom: 1px solid #3a3a3a;
 }
 
 .profile_info_title {

@@ -15,6 +15,8 @@ const withDetail = Component => {
   };
 };
 
+const EnhancedContactList = withDetail(ContactList);
+
 const Main = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -24,10 +26,7 @@ const Main = () => {
   }, []);
 
   const [showProfile, setShowProfile] = useState({});
-
-  useEffect(() => {
-    setShowProfile({ show: false });
-  }, []);
+  useEffect(() => {}, []);
 
   const backHandler = () => {
     setShowProfile({ show: false });
@@ -36,8 +35,6 @@ const Main = () => {
   const handleOnClick = id => {
     setShowProfile({ show: true, id, backHandler });
   };
-
-  const EnhancedContactList = withDetail(ContactList);
 
   return (
     <div className='Main'>

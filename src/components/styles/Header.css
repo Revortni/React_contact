@@ -1,9 +1,10 @@
 header {
-  background-color: #fff;
+  background-color: #98fb98;
   color: #3a3a3a;
-  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
+  position: relative;
 }
 
 .header_title {
@@ -14,12 +15,15 @@ header {
 }
 
 .back_button {
-  margin: 8px 0;
-  margin-right: -20px;
-  padding: 10px;
+  margin: 5px 0;
+  padding: 8px;
   width: 20px;
   height: 20px;
-  float: left;
+  position: absolute;
+}
+
+.back_button:hover {
+  opacity: 0.8;
 }
 
 .back_button_hidden {
@@ -47,8 +51,8 @@ header {
   }
 
   .back_button {
-    margin: 10px 0;
-    padding: 15px;
+    margin: 5px 0;
+    padding: 5px;
     width: 30px;
     height: 30px;
     margin-right: -30px;
