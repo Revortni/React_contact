@@ -15,12 +15,14 @@ const Profile = ({ userInfo }) => {
         <div>
           email
           <span>
-            <a href={`mailto:${email}`}>{email}</a>
+            <a href={`mailto:${email}`} title='Send mail'>
+              {email}
+            </a>
           </span>
         </div>
         <div>
           phone
-          <span>
+          <span title='Call'>
             <a href={`tel:${phone}`}>{phone}</a>
           </span>
         </div>

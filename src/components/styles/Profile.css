@@ -4,6 +4,10 @@
   display: block;
   padding: 10px;
 }
+
+.profile_wrapper {
+  background-color: #fefefe;
+}
 .profile_info {
   padding: 15px;
 }
