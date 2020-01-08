@@ -1,14 +1,11 @@
 import React from 'react';
 import './styles/Profile.css';
 
-const Profile = ({ userInfo, backHandler }) => {
+const Profile = ({ userInfo }) => {
   const { email, phone, address, lastName, firstName, profileImage } = userInfo;
   return (
     <div className='profile_wrapper container'>
       <img className='profile_image' src={profileImage} alt='profile_image' />
-      <div className='back_button' onClick={backHandler}>
-        Back
-      </div>
       <div className='profile_info'>
         <div className='profile_info_title'>Basic Info</div>
         <div>

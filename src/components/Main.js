@@ -7,14 +7,9 @@ import './styles/Main.css';
 
 const withDetail = Component => {
   return props => {
-    const { showProfile, backHandler, ...otherProps } = props;
-    if (showProfile.show) {
-      return (
-        <Profile
-          userInfo={props.users[showProfile.id]}
-          backHandler={backHandler}
-        />
-      );
+    const { showProfile, ...otherProps } = props;
+    if (showProfile && showProfile.show) {
+      return <Profile userInfo={props.users[showProfile.id]} />;
     }
     return <Component {...otherProps} />;
   };
@@ -30,7 +25,9 @@ const Main = () => {
 
   const [showProfile, setShowProfile] = useState({});
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    setShowProfile({ show: false });
+  }, []);
 
   const backHandler = () => {
     setShowProfile({ show: false });
@@ -44,7 +41,7 @@ const Main = () => {
 
   return (
     <div className='Main'>
-      <Header />
+      <Header showProfile={showProfile} />
       <EnhancedContactList
         users={users}
         onClick={handleOnClick}
