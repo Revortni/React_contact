@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/React_contact/static/css/main.9106a50a.chunk.css",
-    "main.js": "/React_contact/static/js/main.c0f40ccd.chunk.js",
-    "main.js.map": "/React_contact/static/js/main.c0f40ccd.chunk.js.map",
+    "main.css": "/React_contact/static/css/main.1b44fff2.chunk.css",
+    "main.js": "/React_contact/static/js/main.3841a746.chunk.js",
+    "main.js.map": "/React_contact/static/js/main.3841a746.chunk.js.map",
     "runtime-main.js": "/React_contact/static/js/runtime-main.a2579e29.js",
     "runtime-main.js.map": "/React_contact/static/js/runtime-main.a2579e29.js.map",
     "static/js/2.4b8f8c34.chunk.js": "/React_contact/static/js/2.4b8f8c34.chunk.js",
     "static/js/2.4b8f8c34.chunk.js.map": "/React_contact/static/js/2.4b8f8c34.chunk.js.map",
     "index.html": "/React_contact/index.html",
-    "precache-manifest.ebc67dd3dd95c36d63d1e61c1eb9515c.js": "/React_contact/precache-manifest.ebc67dd3dd95c36d63d1e61c1eb9515c.js",
+    "precache-manifest.5cde07d7be60d74cb7c54a871f3c4183.js": "/React_contact/precache-manifest.5cde07d7be60d74cb7c54a871f3c4183.js",
     "service-worker.js": "/React_contact/service-worker.js",
-    "static/css/main.9106a50a.chunk.css.map": "/React_contact/static/css/main.9106a50a.chunk.css.map",
+    "static/css/main.1b44fff2.chunk.css.map": "/React_contact/static/css/main.1b44fff2.chunk.css.map",
     "static/js/2.4b8f8c34.chunk.js.LICENSE": "/React_contact/static/js/2.4b8f8c34.chunk.js.LICENSE",
     "static/media/arrow-left-solid.svg": "/React_contact/static/media/arrow-left-solid.713fe29d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a2579e29.js",
     "static/js/2.4b8f8c34.chunk.js",
-    "static/css/main.9106a50a.chunk.css",
-    "static/js/main.c0f40ccd.chunk.js"
+    "static/css/main.1b44fff2.chunk.css",
+    "static/js/main.3841a746.chunk.js"
   ]
 }
