@@ -18,6 +18,16 @@
   padding-top: 62px;
 }
 
+.search_wrapper {
+  background-color: #efefef;
+  position: fixed;
+  width: 100%;
+}
+
+.has_search {
+  margin-top: 62px;
+}
+
 @media screen and (min-width: 1170px) {
   .container {
     width: 73.125em;
@@ -31,6 +41,10 @@
 
   .below_header {
     padding-top: 80px;
+  }
+
+  .has_search {
+    margin-top: 80px;
   }
 }
 
@@ -47,5 +61,9 @@
 
   .below_header {
     padding-top: 80px;
+  }
+
+  .has_search {
+    margin-top: 80px;
   }
 }

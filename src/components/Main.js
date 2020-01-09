@@ -21,7 +21,9 @@ const withSearch = Component => {
     return (
       <>
         <SearchContact handleSearch={search} />
-        <Component {...otherProps} />
+        <div className='has_search'>
+          <Component {...otherProps} />
+        </div>
       </>
     );
   };

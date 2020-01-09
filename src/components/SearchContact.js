@@ -7,14 +7,16 @@ const SearchItem = props => {
   };
 
   return (
-    <div className='container'>
-      <input
-        className='search_item'
-        type='text'
-        name='item'
-        onChange={handleSearch}
-        placeholder='Search'
-      />
+    <div className='search_wrapper'>
+      <div className='container'>
+        <input
+          className='search_item'
+          type='text'
+          name='item'
+          onChange={handleSearch}
+          placeholder='Search'
+        />
+      </div>
     </div>
   );
 };
